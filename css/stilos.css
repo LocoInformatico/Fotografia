@@ -2,6 +2,9 @@
 body {
     font-family: 'Dancing Script', cursive;
     font-size: 18px;
+    background-color: #02010a;
+    width: 900px;
+    margin: 0 auto;
 }
 
 
@@ -50,32 +53,56 @@ body {
 
 .imagen1 {
     background-color: #82c3a6;
+    padding: 20px;
 }
+
 .imagen1 img {
     width: 75%;
-    padding: 10px;
     margin: 0 auto;
+    box-shadow: 2px 2px #02010a;
 }
 
 .imagen2 {
     background-color: #d5c75f;
     flex-basis: 50%;
 }
-.imagen3, .imagen4 {
+.imagen3 figure, .imagen4 figure {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.imagen3 img {
+.imagen3 figure img {
     width: 80%;
     border: 1px solid #000000;
     margin: 10px;
+    transition: transform 1s;
+    box-shadow: 2px #02010a;
 }
 
-.imagen4 img {
-    width: 75%; 
+.imagen3 img:hover {
+    transform: rotate(10deg);
+    box-shadow: 2px #82c3a6;
+}
+
+.imagen4 figure img {
+    width: 75%;
     border: 1px solid #000000;
     margin: 10px;
+    transition: transform 1s;
+    box-shadow: 2px #02010a;
 }
 
+.imagen4 img:hover {
+    transform: translate(20px, -5px);
+    box-shadow: 2px #82c3a6;
+}
+
+@media (min-width: 900px) {
+    .imagen3, .imagen4 {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+    
+}
