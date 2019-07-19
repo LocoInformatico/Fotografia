@@ -59,7 +59,7 @@ body {
 .imagen1 img {
     width: 75%;
     margin: 0 auto;
-    box-shadow: 2px 2px #02010a;
+    box-shadow: 0 2px #02010a;
 }
 
 .imagen2 {
@@ -77,12 +77,12 @@ body {
     border: 1px solid #000000;
     margin: 10px;
     transition: transform 1s;
-    box-shadow: 2px #02010a;
+    box-shadow: 0 2px #02010a;
 }
 
 .imagen3 img:hover {
     transform: rotate(10deg);
-    box-shadow: 2px #82c3a6;
+    box-shadow: 0 2px #82c3a6;
 }
 
 .imagen4 figure img {
@@ -90,19 +90,72 @@ body {
     border: 1px solid #000000;
     margin: 10px;
     transition: transform 1s;
-    box-shadow: 2px #02010a;
+    box-shadow: 0 2px #02010a;
 }
 
 .imagen4 img:hover {
     transform: translate(20px, -5px);
-    box-shadow: 2px #82c3a6;
+    box-shadow: 0 2px #82c3a6;
 }
 
-@media (min-width: 900px) {
-    .imagen3, .imagen4 {
-        flex-direction: row;
-        flex-wrap: nowrap;
+/* Footer */
+
+.encabezadoFooter {
+    display: flex;
+    flex-direction: row;
+}
+
+.encabezadoFooter div {
+    background-color: #C6d5c5;
+    margin: 0 auto;
+    padding: 1% 0 1% 0;
+}
+
+.encabezadoFooter div h1 {
+    margin: 0;
+    padding-top: 1%;
+    padding-left: 5%;
+}
+
+.encabezadoFooter div p {
+    margin: 0;
+    padding-left: 5%;
+    padding-bottom: 0.5%;
+}
+.encabezadoFooter div p img {
+    width: 4%;
+}
+
+/* Media Query */
+@media (max-width: 900px) {
+    body {
+        width: 100%;
+    }
+
+    .contendido,  .contenedor {
+        display: inline-block;
+    }
+
+    .imagen1 img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .encabezadoHeader {
+        display: inline-block;
+        text-align: center;
         width: 100%;
     }
     
+    .imagen3 figure img, .imagen4 figure img {
+        width: 100%;
+    }
+
+    .encabezadoFooter {
+        flex-direction: column;
+    }
+
+    .encabezadoFooter div {
+        margin: 0;
+    }
 }
