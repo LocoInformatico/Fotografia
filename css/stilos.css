@@ -18,6 +18,7 @@ body {
     align-items: center;
     padding: 10px 20px;
     color:  #ffffff;
+    animation: rebote 1s;
 }
 
 .encabezadoHeader h1 {
@@ -103,12 +104,14 @@ body {
 .encabezadoFooter {
     display: flex;
     flex-direction: row;
+    background-color: #C6d5c5;
+    border-radius: 0 0 10px 10px;
 }
 
 .encabezadoFooter div {
-    background-color: #C6d5c5;
     margin: 0 auto;
     padding: 1% 0 1% 0;
+    flex: 1;
 }
 
 .encabezadoFooter div h1 {
@@ -123,7 +126,7 @@ body {
     padding-bottom: 0.5%;
 }
 .encabezadoFooter div p img {
-    width: 4%;
+    width: 6%;
 }
 
 /* Media Query */
@@ -158,4 +161,61 @@ body {
     .encabezadoFooter div {
         margin: 0;
     }
+}
+
+/* Paisajes */
+
+.fotografia {
+    background-color: #d5c75f;
+}
+
+img[class^='foto'] {
+    width: 30%;
+    margin: 0.7%;
+    padding: .5%;
+}
+
+img.foto1 {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+
+img.foto2, img.foto4, img.foto6 {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+img.foto3 {
+    -webkit-filter: sepia(90%);
+    filter: sepia(90%);
+}
+
+@media (max-width: 900px) {
+    .fotografia div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fotografia div img {
+        margin: 3%;
+        width: 80%;
+    }
+}
+
+/* Animacion */
+
+@-webkit-keyframes rebote {
+    0% {
+        margin-top: 150%;
+    }
+
+    60% {
+        margin-top: 30%;
+    }
+
+    100% {
+        margin-top: -5%;
+    }
+
 }
